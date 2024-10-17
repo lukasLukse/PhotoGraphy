@@ -1,0 +1,75 @@
+.main {
+  padding: 0;
+  height: 80vh;
+  background-image: url("https://wallpapers.com/images/featured/photography-vss4nqivnvgidouh.jpg");
+  background-position: center;
+  background-size: cover;
+  background-position-y: -70px;
+  position: relative;
+}
+
+.main ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 1.8rem 1rem;
+  background-color: rgba(255, 255, 255, 0.459);
+}
+.header ul li {
+  font-size: 1.4rem;
+}
+.header ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.header ul li a:hover {
+  color: #0d916d;
+}
+.logo {
+  width: 60px;
+  height: auto;
+  padding: 5px;
+}
+.headerRight {
+  display: flex;
+  padding-right: 1.6rem;
+}
+.headerRight button {
+  background-color: #235a4b;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.headerRight button:hover {
+  scale: 1.1;
+  background-color: #0d916d;
+}
+.headerBottom p {
+  max-width: 1000px;
+  padding: 0 2rem;
+  position: absolute;
+  bottom: 2.2rem;
+  width: calc(100% - 4rem);
+  color: white;
+  font-size: 1.6rem;
+}

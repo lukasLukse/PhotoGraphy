@@ -1,0 +1,15 @@
+.main {
+  background-color: grey;
+  color: #ecf0f1;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-top: 1px solid #34495e;
+  position: relative;
+  bottom: 0;
+}
+.main p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
