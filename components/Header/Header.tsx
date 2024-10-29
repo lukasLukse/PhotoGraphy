@@ -1,14 +1,31 @@
 import Link from "next/link";
 import styles from "./styles.module.css";
+import { useRouter } from "next/router";
 
-const Header = () => {
+type HeaderProps = {
+  isUserLoggedIn: boolean;
+};
+
+const Header = ({ isUserLoggedIn }: HeaderProps) => {
+  const router = useRouter();
+
+  const goToPage = () => {
+    router.push("/signup");
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <ul>
             <li>
-              <Link href="/">LOGO</Link>
+              <Link href="/">
+                <img
+                  src="https://icons.iconarchive.com/icons/icons8/windows-8/256/Photo-Video-Slr-Small-Lens-icon.png"
+                  alt="photo"
+                />
+                PhotoLuke
+              </Link>
             </li>
           </ul>
         </div>
@@ -17,19 +34,22 @@ const Header = () => {
             <li>
               <Link href="/">Home</Link>
             </li>
-            {/* <li>
-              <Link href="/">About</Link>
-            </li> */}
+            <li>
+              <Link href="/">Album</Link>
+            </li>
           </ul>
-          <button>SIGN UP</button>
+          {!isUserLoggedIn ? (
+            <button className={styles.signUpBtn} onClick={goToPage}>
+              SIGN UP
+            </button>
+          ) : (
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/266/266033.png"
+              alt="User Avatar"
+              className={styles.avatarImage}
+            />
+          )}
         </div>
-      </div>
-      <div className={styles.headerBottom}>
-        <p>
-          A forest is a large area covered primarily by trees and other
-          vegetation, creating a complex ecosystem that supports a wide range of
-          plant and animal species.
-        </p>
       </div>
     </div>
   );

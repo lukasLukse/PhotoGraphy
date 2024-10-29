@@ -1,66 +1,102 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://wallpapers.com/images/featured/photography-vss4nqivnvgidouh.jpg");
+  background-size: cover;
+  background-position: 100;
+  height: 100vh;
+  justify-content: center;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.front h1,
+.front p {
+  width: 100%;
+  background-color: #00a77ac2;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 10px;
+  border-bottom: 2px solid white;
+}
+
+.front h1 {
+  font-size: 44px;
+}
+
+.btn {
+  width: 100%;
+  background-color: #00a77ac2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #00916a;
+}
+
 .background {
   background-color: #005841;
-  padding: 2rem;
   text-align: center;
+  padding: 4rem;
   color: white;
+  border-top: 4px solid black;
+}
+
+.sectionOne,
+.sectionTwo,
+.sectionThree {
+  max-width: 1200px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem auto;
+  border-radius: 8px;
+  transition: box-shadow 0.3s, scale 0.3s;
 }
 
 .sectionOne,
 .sectionThree {
-  max-width: 1200px;
-  color: black;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  margin: 2rem auto;
+  background-color: rgba(180, 180, 180, 0.8);
   position: relative;
-  left: -40px;
-  transition: 0.3s;
+  animation: fadeInLeft 0.8s ease-in;
 }
 
 .sectionTwo {
-  max-width: 1200px;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  margin: 0 auto;
-  background-color: rgba(105, 105, 105, 0.8);
-  border-radius: 8px;
-  margin: 2rem auto;
-  position: relative;
-  left: 40px;
-  transition: 0.3s;
+  background-color: #00916a;
+  animation: fadeInRight 0.8s ease-in;
 }
 
 .sectionOne:hover,
+.sectionTwo:hover,
 .sectionThree:hover {
-  box-shadow: -6px -5px 17px 1px rgba(0, 0, 0, 0.55);
-  scale: 1.02;
-}
-.sectionTwo:hover {
-  box-shadow: 11px -6px 17px 1px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.55);
   scale: 1.02;
 }
 
 .photoOneWrapper,
+.photoTwoWrapper,
 .photoThreeWrapper {
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
-.photoTwoWrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  order: 2;
 }
 
 .img {
@@ -76,36 +112,57 @@
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  text-align: center;
 }
 
 .photoOneText h3,
 .photoTwoText h3,
 .photoThreeText h3 {
-  margin: 0;
   font-size: 1.3rem;
   line-height: 1.5;
+  margin: 0;
 }
 
 .photoOneText p,
 .photoTwoText p,
 .photoThreeText p {
-  margin: 0;
   font-size: 1rem;
   line-height: 1.4;
+  margin: 0;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 768px) {
+  .main {
+    background-position: center;
+  }
+
   .sectionOne,
+  .sectionTwo,
   .sectionThree {
     grid-template-columns: 1fr;
     text-align: center;
-    left: -14px;
-  }
-
-  .sectionTwo {
-    grid-template-columns: 1fr;
-    text-align: center;
-    left: 14px;
   }
 
   .photoOneWrapper,
