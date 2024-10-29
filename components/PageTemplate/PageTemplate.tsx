@@ -17,6 +17,7 @@ const PageTemplate = ({ children }: PageTemplateProps) => {
         const response = await validateUse();
         setIsUserLoggedIn(response.status === 200);
       } catch (error) {
+        console.log(error);
         setIsUserLoggedIn(false);
       }
     };

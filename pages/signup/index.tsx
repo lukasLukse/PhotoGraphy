@@ -1,4 +1,3 @@
-import Header from "@/components/Header/Header";
 import styles from "./styles.module.css";
 import SignupFrom from "@/components/SignupForm/SignupFrom";
 
