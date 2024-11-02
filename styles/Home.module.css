@@ -153,9 +153,10 @@
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .main {
     background-position: center;
+    padding: 1rem;
   }
 
   .sectionOne,
@@ -163,6 +164,38 @@
   .sectionThree {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 1.5rem;
+  }
+
+  .front h1 {
+    font-size: 32px;
+    padding: 0.8rem 0;
+  }
+
+  .front p {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+  .btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .photoOneText h3,
+  .photoTwoText h3,
+  .photoThreeText h3 {
+    font-size: 1.1rem;
+  }
+
+  .photoOneText p,
+  .photoTwoText p,
+  .photoThreeText p {
+    font-size: 0.95rem;
   }
 
   .photoOneWrapper,
@@ -175,6 +208,6 @@
   .photoTwoText,
   .photoThreeText {
     order: 2;
-    text-align: center;
+    padding-top: 1rem;
   }
 }

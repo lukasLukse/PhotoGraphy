@@ -142,3 +142,51 @@
     transform: translateY(0);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .main {
+    background-position: center;
+  }
+
+  .form {
+    padding: 20px;
+    max-width: 70%;
+    border-width: 3px;
+  }
+
+  .logo img {
+    width: 40px;
+    margin-right: 8px;
+  }
+
+  .label {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .input {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .error {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .btnLogin {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .toggle span,
+  .linkButton {
+    font-size: 12px;
+  }
+
+  .close button {
+    width: 15%;
+    font-size: 12px;
+  }
+}
